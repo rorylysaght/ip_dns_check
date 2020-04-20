@@ -1,0 +1,11 @@
+google dns       IN  A       8.8.8.8
+google dns       IN  A       008.008.008.008      ; Leading zeros, technically valid IP
+abc.com          IN  A       199.181.132.250
+bogus                        123.123.123.123      ; valid ip, but no server here
+sl2              IN  CNAME   nothing here
+dns2             IN  CNAME   nothing here
+yearup.org       IN  A       23.253.158.38        ; ITSYS-12424
+nonexistent and invalid IP   999.999.999.999      ; correct format, but invalid
+nonexistent and invalid IP   888.888.888          ; too few octets
+nonexistent and invalid IP   444.555.666.777:888  ; too many octets, or port number
+possibly nonexistent IP      127.0.0.1    ; Only works if localhost server is running
